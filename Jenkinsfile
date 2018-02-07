@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'microsoft/windowsservercore'
+    }
+    
+  }
   stages {
     stage('Print hello') {
       steps {
