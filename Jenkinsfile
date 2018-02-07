@@ -6,7 +6,7 @@ pipeline {
     
   }
   stages {
-    stage('Print hello') {
+    stage('Get system information') {
       steps {
         echo 'hello'
         bat 'systeminfo'
