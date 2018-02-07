@@ -9,6 +9,7 @@ pipeline {
     stage('Print hello') {
       steps {
         echo 'hello'
+        bat 'systeminfo'
       }
     }
   }
