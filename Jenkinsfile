@@ -8,7 +8,6 @@ pipeline {
   stages {
     stage('Get system information') {
       steps {
-        echo 'hello'
         bat 'systeminfo'
       }
     }
