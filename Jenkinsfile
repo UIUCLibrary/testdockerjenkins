@@ -5,7 +5,7 @@ pipeline {
 //     image 'microsoft/windowsservercore'
 //    }
     
-  }
+//  }
   stages {
     stage('Get system information') {
       steps {
