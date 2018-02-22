@@ -1,8 +1,9 @@
 pipeline {
-  agent {
-    docker {
-      image 'microsoft/windowsservercore'
-    }
+  agent any
+//  {
+//    docker {
+//     image 'microsoft/windowsservercore'
+//    }
     
   }
   stages {
