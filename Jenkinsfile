@@ -1,6 +1,6 @@
 pipeline {
-  agent docker {
-     image 'microsoft/windowsservercore'
+  agent {
+    docker {image 'microsoft/windowsservercore'}
   }
   stages {
     stage('Get system information') {
