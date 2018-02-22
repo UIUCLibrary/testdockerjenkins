@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Get system information') {
       steps {
-        node {
+        script {
           withDockerServer([uri: 'tcp://lib-docker-win.library.illinois.edu:2376']) {
             docker.image('microsoft/windowsservercore') {
               bat 'systeminfo'
