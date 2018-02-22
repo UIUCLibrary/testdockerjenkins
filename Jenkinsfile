@@ -4,7 +4,9 @@ pipeline {
   }
   stages {
     stage('Get system information') {
-      bat 'systeminfo'
+      steps{
+        bat 'systeminfo'
+      }
     }
   }
 }
