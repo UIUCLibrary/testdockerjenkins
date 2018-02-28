@@ -1,11 +1,11 @@
 pipeline {
   agent {
-    docker {image 'microsoft/windowsservercore'}
+    label Windows
   }
   stages {
     stage('Get system information') {
       steps{
-        bat 'systeminfo'
+        bat "docker run  microsoft/windowsservercore:1709 cmd /C "systeminfo"
       }
     }
   }
