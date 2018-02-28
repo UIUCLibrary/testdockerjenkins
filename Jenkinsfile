@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Get system information') {
       steps{
-        bat "docker run  microsoft/windowsservercore:1709 cmd /C "systeminfo"
+        bat "docker run  microsoft/windowsservercore:1709 cmd /C \"systeminfo\""
       }
     }
   }
