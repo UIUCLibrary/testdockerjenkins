@@ -8,12 +8,12 @@ pipeline {
   stages {
     stage('get Docker version') {
       steps {
-        bat 'docker --version'
+        bat "${tool 'Docker'} --version"
       }
     }
     stage('Get system information') {
       steps {
-        bat 'docker run  microsoft/windowsservercore:1709 cmd /C "systeminfo"'
+        bat "${tool 'Docker'} run microsoft/windowsservercore:1709 cmd /C \"systeminfo\""
       }
     }
   }
