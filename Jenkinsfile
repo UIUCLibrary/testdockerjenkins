@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Get system information') {
       steps {
-        bat "${tool 'Docker'} run -v ${WORKSPACE}:c:/dummy microsoft/windowsservercore:1709 powershell.exe -Command \"cd c:\\dummy && c:\\dummy\\getPython.ps1\""
+        bat "${tool 'Docker'} run -v ${WORKSPACE}:c:/dummy microsoft/windowsservercore:1709 powershell.exe -Command \"cd c:\\dummy; c:\\dummy\\getPython.ps1\""
       }
     }
   }
