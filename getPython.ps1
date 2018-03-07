@@ -1,4 +1,8 @@
 $ErrorActionPreference = "Stop"
+
+Write-Host "Checking network"
+ipconfig
+
 Write-Host "Pinging Google"
 ping www.google.com
 
