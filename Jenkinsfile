@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Get system information') {
       steps {
-        bat "${tool 'Docker'} run -v .:c:/dummy microsoft/windowsservercore:1709 powershell.exe -Command c:\dummy\run.bat"
+        bat "${tool 'Docker'} run -v .:c:/dummy microsoft/windowsservercore:1709 powershell.exe -Command c:\\dummy\\run.bat"
       }
     }
   }
