@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Get system information') {
       steps {
-        bat "${tool 'Docker'} run microsoft/windowsservercore:1709 cmd /C \"systeminfo\""
+        bat "${tool 'Docker'} run --rm microsoft/windowsservercore:1709 cmd /C \"systeminfo\""
       }
     }
   }
