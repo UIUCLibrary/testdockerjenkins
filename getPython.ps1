@@ -11,4 +11,4 @@ Invoke-WebRequest -Uri 'https://www.python.org/ftp/python/3.6.4/python-3.6.4-amd
 Write-Host "Installing python"
 .\python-3.6.4-amd64.exe /quiet InstallAllUsers=1 PrependPath=1 Include_test=0
 Write-Host "Python is installed"
-Invoke-Expression -Command "python --version"
+Invoke-Expression -Command "py --version"
