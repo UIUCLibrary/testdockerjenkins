@@ -2,13 +2,9 @@ $ErrorActionPreference = "Stop"
 
 Write-Host "Downloading Python"
 Invoke-WebRequest -Uri 'https://www.python.org/ftp/python/3.6.4/python-3.6.4-amd64.exe' -UseBasicParsing -OutFile 'python-3.6.4-amd64.exe'
-Invoke-Expression -Command "dir"
 
 Write-Host "Installing Python"
-Start-Process -FilePath .\python-3.6.4-amd64.exe -ArgumentList ("/quiet", "InstallAllUser=1 PrependPath=1 Include_test=0 TargetDir=c:\Python") -Wait
+Start-Process -FilePath .\python-3.6.4-amd64.exe -ArgumentList ("/quiet", "InstallAllUser=1 PrependPath=1 Include_test=0 TargetDir=c:\python") -Wait
 Write-Host "Python is installed"
-dir c:\
-Get-ChildItem -Recurse c:\Python
 
-Get-Command python
-# Invoke-Expression -Command "py --version"
+c:\python\python.exe --version
