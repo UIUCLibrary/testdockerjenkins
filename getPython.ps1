@@ -7,7 +7,8 @@ Invoke-Expression -Command "dir"
 Write-Host "Installing Python"
 Start-Process -FilePath .\python-3.6.4-amd64.exe -ArgumentList ("/quiet", "InstallAllUser=1 PrependPath=1 Include_test=0 TargetDir=c:\Python") -Wait
 Write-Host "Python is installed"
-Get-ChildItem -Recurse c:\Users
+dir c:\
+Get-ChildItem -Recurse c:\Python
 
 Get-Command python
 # Invoke-Expression -Command "py --version"
