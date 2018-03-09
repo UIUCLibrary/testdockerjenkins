@@ -6,6 +6,7 @@ Invoke-Expression -Command "dir"
 Write-Host "Installing Python"
 Invoke-Expression -Command '.\python-3.6.4-amd64.exe --help'
 Invoke-Expression -Command '.\python-3.6.4-amd64.exe /passive InstallAllUsers=1 PrependPath=1 Include_test=0 SimpleInstall=1 SimpleInstallDescription=\"Just for me, no test suite.\"'
+Invoke-Expression -Command "dir c:\"
 Write-Host "Python is installed"
 Get-Command python
 # Invoke-Expression -Command "py --version"
