@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('get Docker version') {
       steps {
-        bat "${tool 'Docker'} --version"
+        bat "docker --version"
       }
     }
     stage('Get system information') {
