@@ -5,10 +5,10 @@ pipeline {
     }
     
   }
-  stages {
-    environment{
+  environment{
       PATH = "${tool 'Docker'};${PATH}"
-    }
+  }
+  stages {  
     stage('get Docker version') {
       steps {
         bat "docker --version"
