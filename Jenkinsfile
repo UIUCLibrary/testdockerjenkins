@@ -6,13 +6,13 @@ pipeline {
     
   }
   stages {
+   stage('get node version') {
     agent {
       docker { image 'node:7-alpine' }
     }
-   stage('get node version') {
-     steps {
+    steps {
        sh 'node --version'
-     }
+    }
     }
   }
 }
