@@ -1,5 +1,3 @@
-FROM microsoft/windowsservercore
+FROM ubuntu:18.04
 
-MAINTAINER hborcher@illinois.edu
-
-RUN echo hello world from inside a windows server core container 
+RUN apt-get update && apt-get install -y python3-pip
