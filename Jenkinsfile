@@ -1,13 +1,12 @@
 pipeline {
-  agent {
-    docker {
-      image 'ubuntu:18.04'
-    }
-  }
   stages {  
     stage('get Docker version') {
       steps {
-        sh "echo hello world"
+        node("docker"){
+          docker.image('ubuntu:18.04').withRun() { c->
+              sh "echo hello world"    
+          }
+        }
       }
     }
   }
