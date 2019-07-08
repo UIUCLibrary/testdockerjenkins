@@ -1,6 +1,9 @@
 pipeline {
-  agent{
-    label: docker
+ agent {
+    node {
+      label 'Windows&&Docker'
+    }
+    
   }
   stages {  
     stage('get Docker version') {
