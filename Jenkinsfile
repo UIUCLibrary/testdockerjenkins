@@ -1,4 +1,7 @@
 pipeline {
+  agent{
+    label: docker
+  }
   stages {  
     stage('get Docker version') {
       steps {
