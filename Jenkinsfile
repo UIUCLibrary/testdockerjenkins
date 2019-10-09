@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       label 'Windows&&Docker&&aws'
-      image 'mcr.microsoft.com/dotnet/framework/sdk'
+      image 'tyko/1903_win_docker'
     }
   }
   stages {
