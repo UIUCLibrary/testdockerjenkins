@@ -1,20 +1,20 @@
 pipeline {
   agent {
-    node {
+    docker {
       label 'Windows&&Docker'
+      image 'mcr.microsoft.com/powershell'
     }
-    
   }
   stages {
     stage('get Docker version') {
       steps {
-        bat "${tool 'Docker'} --version"
+        echo "hello inside docker"
       }
     }
-    stage('Get system information') {
-      steps {
-        bat "${tool 'Docker'} run microsoft/windowsservercore:1709 cmd /C \"systeminfo\""
-      }
-    }
+//    stage('Get system information') {
+//      steps {
+//        bat "${tool 'Docker'} run microsoft/windowsservercore:1709 cmd /C \"systeminfo\""
+//      }
+//    }
   }
 }
