@@ -9,7 +9,8 @@ pipeline {
     stage('get Docker version') {
       steps {
         echo "hello inside docker"
-        powershell "dir"
+        writeFile file: 'dummy.txt', text: 'hello'
+        //powershell "dir"
       }
     }
 //    stage('Get system information') {
