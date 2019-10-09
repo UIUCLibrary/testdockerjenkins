@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       label 'Windows&&Docker&&aws'
-      image 'tyko/1903_win_docker'
+      image 'mcr.microsoft.com/powershell:preview'
     }
   }
   stages {
