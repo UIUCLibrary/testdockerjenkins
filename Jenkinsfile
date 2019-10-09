@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      label 'Windows&&Docker'
+      label 'Windows&&Docker&&aws'
       image 'mcr.microsoft.com/powershell'
     }
   }
