@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       label 'Windows&&Docker&&aws'
-      image 'mcr.microsoft.com/powershell:latest'
+      image 'mcr.microsoft.com/windows/servercore'
     }
   }
   stages {
