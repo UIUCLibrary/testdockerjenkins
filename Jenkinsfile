@@ -9,6 +9,7 @@ pipeline {
     stage('get Docker version') {
       steps {
         echo "hello inside docker"
+        bat "dir"
       }
     }
 //    stage('Get system information') {
