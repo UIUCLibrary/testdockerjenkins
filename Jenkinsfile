@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       label 'Windows&&Docker&&aws'
-      image 'mcr.microsoft.com/windows/servercore'
+      image 'mcr.microsoft.com/dotnet/framework/sdk'
     }
   }
   stages {
