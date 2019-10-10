@@ -1,12 +1,13 @@
 pipeline {
-  agent {
-    docker {
-      label 'Windows&&Docker&&aws'
-      image 'mcr.microsoft.com/powershell:preview'
-    }
-  }
+  agent any
   stages {
     stage('get Docker version') {
+        agent {
+          docker {
+            label 'Windows&&Docker&&aws'
+            image 'mcr.microsoft.com/powershell:preview'
+          }
+        }
       steps {
         echo "hello inside docker"
         writeFile file: 'dummy.txt', text: 'hello'
