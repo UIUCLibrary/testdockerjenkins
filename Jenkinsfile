@@ -11,7 +11,7 @@ pipeline {
       steps {
         echo "hello inside docker"
         writeFile file: 'dummy.txt', text: 'hello'
-        bat "echo hello"
+        powershell "Write-Host 'Hello, World!'"
         //powershell "dir"
       }
     }
