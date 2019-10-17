@@ -10,12 +10,16 @@ pipeline {
         }
       options {
         skipDefaultCheckout true
+        timeout(1)
       }
 
       steps {
-        echo "hello inside docker"
-        writeFile file: 'dummy.txt', text: 'hello'
-        powershell "Write-Host 'Hello, World!'"
+        ws("mytest"){
+          echo "hello inside docker"
+          writeFile file: 'dummy.txt', text: 'hello'
+          powershell "Write-Host 'Hello, World!'"
+        }
+        
         //powershell "dir"
       }
     }
