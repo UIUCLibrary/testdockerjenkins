@@ -14,11 +14,8 @@ pipeline {
       }
 
       steps {
-        ws("mytest"){
-          echo "hello inside docker"
-          writeFile file: 'dummy.txt', text: 'hello'
-          powershell "Write-Host 'Hello, World!'"
-        }
+        echo "hello inside docker"
+        
         
         //powershell "dir"
       }
