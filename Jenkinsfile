@@ -4,8 +4,8 @@ pipeline {
     stage('get Docker version') {
         agent {
           docker {
-            label 'Windows&&Docker&&aws'
-            image 'mcr.microsoft.com/powershell:preview'
+            label 'Windows&&Docker&&!aws'
+            image 'mcr.microsoft.com/powershell'
           }
         }
       options {
